@@ -52,5 +52,5 @@ for k in all_a:
     doc.add_picture('1.jpg',width=Inches(1.25))
     doc.add_paragraph(title[num1])
     doc.add_paragraph(des[num2])
-doc.save('text.docx')
+doc.save('mit_eecs.docx')
 os.remove('1.jpg')
