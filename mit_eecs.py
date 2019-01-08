@@ -33,6 +33,8 @@ for k in all_a:
     html_url = requests.get(prev,headers=headers)
     html_Soup = BeautifulSoup(html_url.text, 'lxml')
     image_url = html_Soup.find('img')['src']
+    if image_url == '/sites/all/themes/adaptivetheme/miteecs_adaptive/images/structure/mit-logo.png':
+        continue
     image=requests.get(image_url,headers=headers)
     f=open('1.jpg','wb')
     f.write(image.content)
